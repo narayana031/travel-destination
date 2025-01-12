@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login or Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Black background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white; /* Default text color for better contrast */
+        }
+
+        .container {
+            background-color: #333; /* Dark gray background for the form */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Softer shadow */
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ff6f61; /* Highlight color for the heading */
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #fff; /* White text for labels */
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #555; /* Darker border */
+            background-color: #222; /* Dark background for inputs */
+            color: #fff; /* White text for inputs */
+            border-radius: 5px;
+        }
+
+        .form-group input::placeholder {
+            color: #bbb; /* Lighter placeholder text */
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6f61; /* Orange button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e55d4b; /* Darker orange on hover */
+        }
+
+        .error {
+            color: #ff6f61; /* Error messages in orange for consistency */
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signup-link a {
+            color: #ff6f61; /* Orange link color */
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function handleLogin() {
+            // Predefined credentials
+            const validUsername = "test945";
+            const validPassword = "password123";
+
+            // Get user input
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Validate credentials
+            if (username === validUsername && password === validPassword) {
+                window.location.href = "home2.html"; // Redirect to Home page
+            } else {
+                // Display error message
+                document.getElementById("error-message").innerText = 
+                    "Incorrect username or password. Please try again or sign up if you don't have an account.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+        <button class="btn" onclick="handleLogin()">Login</button>
+        <p id="error-message" class="error"></p>
+        <div class="signup-link">
+            <p>New here? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </div>
+</body>
+</html>

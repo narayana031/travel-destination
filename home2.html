@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Travel Destination</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Ensures the body takes full height */
+        }
+        header {
+            background-color: rgba(0, 123, 255, 0.9);
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ddd;
+            padding: 10px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #555;
+            margin: 0 15px;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: rgba(0, 123, 255, 1);
+        }
+        .container {
+            padding: 20px;
+            flex-grow: 1; /* Ensures the container takes up available space */
+            overflow: auto; /* Makes sure the content scrolls if needed */
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            color: white;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .section h2 {
+            margin-bottom: 10px;
+            color: white;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+        .packages {
+            background-image: url('package.jpg'); /* Replace with your image URL */
+        }
+        .places {
+            background-image: url('place2.jpg'); /* Replace with your image URL */
+        }
+        .reviews {
+            background-image: url('review3.jpg'); /* Replace with your image URL */
+        }
+        .packages .item, .places ul, .reviews .review {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .packages .item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .packages .icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 123, 255, 0.8);
+            color: white;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .places ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        .places ul li {
+            color: white;
+            margin-bottom: 5px;
+        }
+        .reviews .review {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .reviews .stars {
+            color: gold;
+            margin-right: 10px;
+        }
+        .back-button {
+            text-align: center;
+            margin: 20px auto;
+        }
+        .back-button a {
+            text-decoration: none;
+            background-color: #555;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-button a:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Travel Destinations</h1>
+    </header>
+    <nav>
+        <a href="#packages">Packages</a>
+        <a href="#places">Places</a>
+        <a href="#reviews">Reviews</a>
+    </nav>
+    <div class="container">
+        <!-- Packages Section -->
+        <div class="section packages" id="packages">
+            <h2>Packages</h2>
+            <div class="item">
+                <div class="icon">$299</div>
+                <p>Family Adventure Package</p>
+            </div>
+            <div class="item">
+                <div class="icon">$199</div>
+                <p>Solo Traveler Package</p>
+            </div>
+            <div class="item">
+                <div class="icon">$499</div>
+                <p>Luxury Escape Package</p>
+            </div>
+        </div>
+        <!-- Places Section -->
+        <div class="section places" id="places">
+            <h2>Places</h2>
+            <ul>
+                <li>Paris - Eiffel Tower</li>
+                <li>China - Great Wall</li>
+                <li>Japan - Tokyo City</li>
+                <li>USA - Grand Canyon</li>
+            </ul>
+        </div>
+        <!-- Reviews Section -->
+        <div class="section reviews" id="reviews">
+            <h2>Reviews</h2>
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <p>"Amazing experience! Highly recommended."</p>
+            </div>
+            <div class="review">
+                <div class="stars">★★★★☆</div>
+                <p>"Very well planned and organized."</p>
+            </div>
+            <div class="review">
+                <div class="stars">★★★☆☆</div>
+                <p>"Good but could improve the service."</p>
+            </div>
+        </div>
+    </div>
+    <div class="back-button">
+        <a href="traveldestination2.html">Back to Home</a> <!-- Updated link -->
+    </div>
+</body>
+</html>
